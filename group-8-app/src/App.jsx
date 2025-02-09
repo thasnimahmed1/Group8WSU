@@ -1,20 +1,30 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Authentication from "./pages/Authentication";
 import Homepage from "./pages/Homepage";
 import CoursePage from "./pages/CoursePage";
+import Taskbar from "./components/Taskbar";
+
+const Layout = ({ children }) => {
+  const location = useLocation();
+  return (
+    <>
+      {location.pathname !== "/auth" && <Taskbar />}
+      {children}
+    </>
+  );
+};
 
 function App() {
   return (
-    <Router>
+    <Layout>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/auth" element={<Authentication />} />
         <Route path="/course" element={<CoursePage />} />
       </Routes>
-    </Router>
+    </Layout>
   );
 }
 
 export default App;
-

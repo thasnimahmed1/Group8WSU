@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-select": "^5.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^8.46.0",
@@ -22,7 +23,7 @@
     "eslint": "^8.46.0",
     "eslint-plugin-react": "^7.33.3",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "react-router-dom": "^7.1.5",
     "vite": "^4.3.9"
   }
 }
-
