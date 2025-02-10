@@ -1,4 +1,10 @@
 /* Taskbar.css */
+.title {
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Ensures minimal height */
+}
+
 .taskbar {
     position: fixed;
     top: 0;

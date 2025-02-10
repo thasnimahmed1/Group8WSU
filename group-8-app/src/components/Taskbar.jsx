@@ -14,15 +14,42 @@ const Taskbar = () => {
     { value: "1200", label: "1200" },
   ];
 
+  const selectStyle = {
+    control: (base) => ({
+      ...base,
+      backgroundColor: "white",
+      color: "black",
+    }),
+    singleValue: (base) => ({
+      ...base,
+      color: "black",
+    }),
+    menu: (base) => ({
+      ...base,
+      backgroundColor: "white",
+    }),
+    option: (base, state) => ({
+      ...base,
+      color: state.isSelected ? "white" : "black",
+      backgroundColor: state.isSelected ? "#3b82f6" : "white",
+      ":hover": {
+        backgroundColor: "#e2e8f0",
+      },
+    }),
+  };  
+
   return (
     <div className="taskbar">
       {/* Logo */}
       <img src={logo} alt="Logo" className="taskbar-logo" />
 
+      {/* Title Banner */}
+      <h2 className="title">WSU Study Groups</h2>
+
       {/* Searchable Select Boxes */}
       <div className="taskbar-right">
-        <Select options={options1} placeholder="Select Subject" className="taskbar-select" />
-        <Select options={options2} placeholder="Select Course" className="taskbar-select" />
+        <Select options={options1} placeholder="Select Subject" styles={selectStyle} className="taskbar-select" />
+        <Select options={options2} placeholder="Select Course" styles={selectStyle} className="taskbar-select" />
         {/* Search Button */}
         <button className="taskbar-button">Search</button>
       </div>
