@@ -1,0 +1,29 @@
+.records-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+}
+
+.record-card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.record-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.record-subtitle {
+    font-size: 1rem;
+    color: #555;
+}
+
+.record-class {
+    font-size: 0.9rem;
+    color: #888;
+}
